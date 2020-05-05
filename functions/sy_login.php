@@ -26,14 +26,16 @@ $row = mysqli_fetch_assoc($query);
 $resultQuery = mysqli_num_rows($query);
 
 if($resultQuery == 1 && $row['isAdmin'] == 1) {
-    $_SESSION['admin'] = $row['isAdmin'];
     $_SESSION['user'] = $username;
+    $_SESSION['admin'] = $row['isAdmin'];
     header('Location: ../panel/admin.php');
-	exit();
+    exit();
+    
 } elseif ($resultQuery == 1 && $row['isAdmin'] == 0) {
     $_SESSION['user'] = $username;
 	header('Location: ../panel/panel.php');
-	exit();
+    exit();
+    
 } else {
     header('Location: ../index.php');
     exit();
