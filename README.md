@@ -1,4 +1,4 @@
-# Tutorial to use the system
+## Tutorial to use the system
 > System created with PHP and MySqli
 
 ### How to use
