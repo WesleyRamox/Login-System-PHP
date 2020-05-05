@@ -20,9 +20,5 @@
 
         <button type="submit">Sign-in</button>
     </form>
-    <?php 
-    if($_SESSION['db_error'] != "")
-        echo $_SESSION['db_error']; 
-    ?>
 </body>
 </html>
